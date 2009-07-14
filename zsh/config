@@ -1,13 +1,20 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export PS1='%m:%3~$(git_info_for_prompt)%# '
+# else
+#   export PS1='%3~$(git_info_for_prompt)%# '
+# fi
+
+# makes color constants available
+autoload -U colors
+colors
 
 export EDITOR='mate -w'
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-
+export PATH="~/bin:/opt/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export MANPATH="/opt/loca/share/man:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+export AUTOFEATURE='true'
+export RSPEC='true'
+export CLICOLOR=1
+export ARCHFLAGS="-arch i386"
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
@@ -43,3 +50,34 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char 
+
+# Set a nice git-prompt (calls git_status())
+git_prompt_info() {
+  local git_dir ref br;
+  git_dir=$(git rev-parse --git-dir 2> /dev/null) || return
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  branch_prompt=${ref#refs/heads/}
+  if [ -n "$branch_prompt" ]; then
+    status_icon=$(git_status)
+    echo "$status_icon%{$fg_bold[green]%} [$branch_prompt]%{$reset_color%}"
+  fi
+}
+
+
+# Show character if index and/or work-tree are dirty
+git_status() {
+  my_status=$(git status)
+
+  if [[ "$my_status" == *"Changes to be committed"* ]]; then
+    output="%{$fg[green]%}+"
+  fi
+
+  if [[ "$my_status" == *"Changed but not updated"* ]]; then
+    output="$output%{$fg[red]%}*"
+  fi
+
+  echo $output
+}
+
+# prompt
+export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
