@@ -37,3 +37,6 @@
 [submodule "emacs.d"]
 	path = emacs.d
 	url = git://github.com/technomancy/emacs-starter-kit.git
+[submodule "vimbundles/vim-rubyredgreen"]
+	path = vimbundles/vim-rubyredgreen
+	url = git://github.com/reinh/vim-rubyredgreen.git
