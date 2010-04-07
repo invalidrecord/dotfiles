@@ -74,3 +74,12 @@ I've installed this enough times that it's a pain in the ass to redo, so I'm kee
 
 	ln -sf ~/code/dotfiles/TextMate/Bundles ~/Library/Application\ Support/TextMate/Bundles
 
+If you already have some bundles in ~/Library/Application\ Support/Textmate/ then you'll need to rm -rf them.
+
+You'll have to init them as well:
+
+	git submodule init
+	
+You can also reload them:
+
+	osascript -e 'tell app "TextMate" to reload bundles'
