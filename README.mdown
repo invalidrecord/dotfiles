@@ -76,9 +76,10 @@ I've installed this enough times that it's a pain in the ass to redo, so I'm kee
 
 If you already have some bundles in ~/Library/Application\ Support/Textmate/ then you'll need to rm -rf them.
 
-You'll have to init them as well:
+Let's get them ready to use:
 
 	git submodule init
+	git submodule update
 	
 You can also reload them:
 
