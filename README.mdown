@@ -4,7 +4,7 @@ Original version was from Ryan Bates Dot Files
 Since modified to suit my needs
 
 Installation
------
+------------
 
 	git clone git:/github.com/jschoolcraft/dotfiles/ ~/.dotfiles
 	cd ~/.dotfiles
@@ -13,7 +13,7 @@ Installation
 
 
 Environment
-------
+-----------
 
 I am running on Mac OS X, but it will likely work on Linux as well with 
 minor fiddling. I primarily use zsh, but this includes some older bash 
@@ -23,7 +23,7 @@ the following command.
 	chsh -s /bin/zsh
 
 Features
-------
+--------
 
 I normally place all of my coding projects in ~/code, so this directory 
 can easily be accessed (and tab completed) with the "c" command.
@@ -68,6 +68,7 @@ also use show_log and hide_log in script/console to show the log inline.
 See the other aliases in ~/.zsh/aliases
 
 TextMate Bundles
+----------------
 
 I've installed this enough times that it's a pain in the ass to redo, so I'm keeping all my bundles as submodules here then symlinking them out to the proper place.
 
