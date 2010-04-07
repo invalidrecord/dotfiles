@@ -73,3 +73,6 @@
 [submodule "TextMate/Bundles/markdown.tmbundle"]
 	path = TextMate/Bundles/markdown.tmbundle
 	url = git://github.com/textmate/markdown.tmbundle.git
+[submodule "TextMate/Bundles/textile.tmbundle"]
+	path = TextMate/Bundles/textile.tmbundle
+	url = git://github.com/textmate/textile.tmbundle.git
