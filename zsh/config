@@ -9,8 +9,8 @@ autoload -U colors
 colors
 
 export EDITOR='vim'
-export PATH="$HOME/bin:/opt/local/bin:/opt/local/lib/postgresql84/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export MANPATH="/opt/loca/share/man:/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export MANPATH="/usr/local/man:/usr/local/git/man:$MANPATH"
 export AUTOFEATURE='true'
 export RSPEC='true'
 export CLICOLOR=1
@@ -69,14 +69,14 @@ bindkey "\e[C" forward-char
 bindkey "\e[D" backward-char
 
 # zle -N newtab
-# 
+#
 # bindkey '^[^[[D' backward-word
 # bindkey '^[^[[C' forward-word
 # bindkey '^[[5D' beginning-of-line
 # bindkey '^[[5C' end-of-line
 # bindkey '^[[3~' delete-char
 # bindkey '^[^N' newtab
-# bindkey '^?' backward-delete-char 
+# bindkey '^?' backward-delete-char
 
 # Set a nice git-prompt (calls git_status())
 git_prompt_info() {
