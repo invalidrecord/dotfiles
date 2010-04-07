@@ -6,8 +6,8 @@ Since modified to suit my needs
 Installation
 ------------
 
-	git clone git:/github.com/jschoolcraft/dotfiles/ ~/.dotfiles
-	cd ~/.dotfiles
+	git clone git:/github.com/jschoolcraft/dotfiles/ ~/code/dotfiles
+	c dotfiles
 	rake install
 	# edit ~/.gitconfig and personalize it
 
