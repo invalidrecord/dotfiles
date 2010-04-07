@@ -1,11 +1,11 @@
-Ryan Bates Dot Files
+Original version was from Ryan Bates Dot Files
+github.com/ryanb/dotfiles
 
-These are config files to set up a system the way I like it.
-
+Since modified to suit my needs
 
 Installation
 
-  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+  git clone git:/github.com/jschoolcraft/dotfiles/ ~/.dotfiles
   cd ~/.dotfiles
   rake install
   # edit ~/.gitconfig and personalize it
@@ -64,3 +64,10 @@ also use show_log and hide_log in script/console to show the log inline.
   scaffold # script/generate nifty_scaffold
 
 See the other aliases in ~/.zsh/aliases
+
+TextMate Bundles
+
+I've installed this enough times that it's a pain in the ass to redo, so I'm keeping all my bundles as submodules here then symlinking them out to the proper place.
+
+	ln -sf ~/code/dotfiles/TextMate/Bundles ~/Library/Application\ Support/TextMate/Bundles
+
