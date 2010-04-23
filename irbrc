@@ -1,5 +1,6 @@
 # The following gems are required: 
-# cldwalker-hirb, wirble, what_methods, map_by_method, irb-history
+# hirb, wirble, what_methods, map_by_method, irb-history
+# gem install hirb wirble what_methods map_by_method irb-history
 [ 'pp', 'fileutils', 'rubygems', 'wirble', 'hirb', 'irb/completion', 
   'irb/ext/save-history', 'map_by_method', 
   'what_methods'].each do |library|

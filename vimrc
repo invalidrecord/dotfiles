@@ -181,9 +181,6 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " this from Adam Lowe (http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html)
 " let pathogen bring in our plugins
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
-end
+call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
 
 " some bits from http://media.nodnod.net/vimrc.txt
