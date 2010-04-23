@@ -76,3 +76,33 @@
 [submodule "TextMate/Bundles/textile.tmbundle"]
 	path = TextMate/Bundles/textile.tmbundle
 	url = git://github.com/textmate/textile.tmbundle.git
+[submodule "vimbundles/vim-ruby-debugger"]
+	path = vimbundles/vim-ruby-debugger
+	url = git://github.com/astashov/vim-ruby-debugger.git
+[submodule "vimbundles/textile.vim"]
+	path = vimbundles/textile.vim
+	url = git://github.com/timcharper/textile.vim.git
+[submodule "vimbundles/vim-fugitive"]
+	path = vimbundles/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vimbundles/vim-git"]
+	path = vimbundles/vim-git
+	url = git://github.com/tpope/vim-git.git
+[submodule "vimbundles/vim-markdown"]
+	path = vimbundles/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "vimbundles/vim-vividchalk"]
+	path = vimbundles/vim-vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
+[submodule "vimbundles/vim-align"]
+	path = vimbundles/vim-align
+	url = git://github.com/tsaleh/vim-align.git
+[submodule "vimbundles/vim-supertab"]
+	path = vimbundles/vim-supertab
+	url = git://github.com/tsaleh/vim-supertab.git
+[submodule "vimbundles/vim-tcomment"]
+	path = vimbundles/vim-tcomment
+	url = git://github.com/tsaleh/vim-tcomment.git
+[submodule "vimbundles/vim-ruby"]
+	path = vimbundles/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git

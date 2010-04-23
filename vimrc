@@ -183,4 +183,3 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " let pathogen bring in our plugins
 call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
 
-" some bits from http://media.nodnod.net/vimrc.txt
