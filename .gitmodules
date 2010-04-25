@@ -106,3 +106,6 @@
 [submodule "vimbundles/vim-ruby"]
 	path = vimbundles/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vimbundles/syntastic"]
+	path = vimbundles/syntastic
+	url = git://github.com/scrooloose/syntastic.git

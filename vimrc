@@ -77,6 +77,22 @@ set expandtab
 " Always display the status line
 set laststatus=2
 
+if has("statusline")
+  set statusline=
+  set statusline+=%<\                       " cut at start
+  set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
+  set statusline+=%-40f\                    " relative path
+  set statusline+=%=                        " seperate between right- and left-aligned
+  set statusline+=%1*%y%*%*\                " file type
+  set statusline+=%10((%l/%L)%)\            " line and column
+  set statusline+=%P                        " percentage of file
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  set statusline+=%{fugitive#statusline()}
+endif
+
+
 " , is the leader character
 let mapleader = ","
 let g:mapleader = ","
