@@ -94,8 +94,8 @@ endif
 
 
 " , is the leader character
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = ";"
+let g:mapleader = ";"
 
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
@@ -116,6 +116,30 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
+
+" fugitive keybindings
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :Gcommit<CR>
+map <Leader>gp :Git push origin master<CR>
+
+" git-svn specific keybinds
+map <Leader>gnr :Git svn rebase<CR>
+map <leader>gnd :Git svn dcommit<CR>
+
+
+" let NERDTree change my working directory if its root changes.
+let NERDTreeChDirMode=2
+" show hidden files
+let NERDTreeShowHidden=1
+
+" keybindings
+map <Leader>d :NERDTreeToggle<CR>
+
+" NERDCommenter keybindings
+map <Leader>c ,c<space>
+
+" bufexplorer keyboard shortcut
+map <Leader>be :BufExplorer<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
