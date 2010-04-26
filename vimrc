@@ -13,6 +13,16 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
+" MacVim
+if has("gui_macvim")
+  set transparency=5
+  set lines=60
+  set formatoptions-=tc
+  set guioptions-=T
+  set cursorline
+endif
+
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -59,13 +69,13 @@ else
 
 endif " has("autocmd")
 
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
+ if has("folding")
+  set foldenable
+  set foldmethod=syntax
+  set foldlevel=1
+  set foldnestmax=2
+  set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
+ endif
 
 " Softtabs, 2 spaces
 set tabstop=2
