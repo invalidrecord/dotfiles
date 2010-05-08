@@ -21,11 +21,7 @@ Environment
 -----------
 
 I am running on linux, but it will DEFINATLEY work on Mac OSX as well with 
-minor fiddling. I primarily use zsh, but this includes some older bash 
-files as well. If you would like to switch to zsh, you can do so with 
-the following command.
-
-	chsh -s /bin/zsh
+minor fiddling though you may wish to use Jeff or Ryans setups instead. I just switched to using zsh, but there are a few odds and sods for bash also.
 
 Features
 --------
@@ -71,9 +67,3 @@ also use show_log and hide_log in script/console to show the log inline.
 	scaffold # script/generate nifty_scaffold
 
 See the other aliases in ~/.zsh/aliases
-
-Vim Bundles
-----------------
-
-I've installed this enough times that it's a pain in the ass to redo, so I'm keeping all my bundles as submodules here then symlinking them out to the proper place.
-
