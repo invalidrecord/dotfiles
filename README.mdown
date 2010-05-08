@@ -1,5 +1,7 @@
 Original version was from Ryan Bates Dot Files
 [github.com/ryanb/dotfiles](http://github.com/ryanb/dotfiles)
+Modified by Jeff Schoolcraft
+[github.com/schoolcraft/dotfiles](http://github.com/jschoolcraft/dotfiles)
 
 Since modified to suit my needs
 
@@ -8,14 +10,17 @@ Installation
 
 	git clone git:/github.com/jschoolcraft/dotfiles/ ~/code/dotfiles
 	cd dotfiles
+  git submodules init
+  git submodules update
 	rake install
-	# edit ~/.gitconfig and personalize it
+	edit ~/.gitconfig and personalize it
+  edit ~/irssi/config to suit your needs
 
 
 Environment
 -----------
 
-I am running on Mac OS X, but it will likely work on Linux as well with 
+I am running on linux, but it will DEFINATLEY work on Mac OSX as well with 
 minor fiddling. I primarily use zsh, but this includes some older bash 
 files as well. If you would like to switch to zsh, you can do so with 
 the following command.
@@ -67,20 +72,8 @@ also use show_log and hide_log in script/console to show the log inline.
 
 See the other aliases in ~/.zsh/aliases
 
-TextMate Bundles
+Vim Bundles
 ----------------
 
 I've installed this enough times that it's a pain in the ass to redo, so I'm keeping all my bundles as submodules here then symlinking them out to the proper place.
 
-	ln -sf ~/code/dotfiles/TextMate/Bundles ~/Library/Application\ Support/TextMate/Bundles
-
-If you already have some bundles in ~/Library/Application\ Support/Textmate/ then you'll need to rm -rf them.
-
-Let's get them ready to use:
-
-	git submodule init
-	git submodule update
-	
-You can also reload them:
-
-	osascript -e 'tell app "TextMate" to reload bundles'

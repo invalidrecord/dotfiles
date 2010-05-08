@@ -233,9 +233,9 @@ statusbar = {
 #THIS SECTION DEALS WITH SETTINGS SUCH AS YOUR NAME AND TIMESTAMP FORMAT
 settings = {
   core = {
-    real_name = "Jeff Schoolcraft";
-    user_name = "jschoolcraft";
-    nick = "jschoolcraft";
+    real_name = "InvalidRecord";
+    user_name = "invalidrecord";
+    nick = "invalidrecord";
     timestamp_format = "%H:%M:%S";
     settings_autosave = "no";
     awaylog_file  = "~/.irclogs/away.log";
@@ -245,7 +245,7 @@ settings = {
   };
   "irc/core" = {
     skip_motd        = "yes";
-    alternate_nick  = "jschoolc";
+    alternate_nick  = "invarec";
   };
   "fe-text" = { scrollback_time = "48h"; };
   "fe-text/core" = { mail_counter = "off"; };
@@ -277,7 +277,8 @@ settings = {
 
 #THIS SECTION DEALS WITH YOUR HILIGHTS
 hilights = (
-  { text = "jschoolcraft"; nick = "yes"; word = "yes"; line = "yes"; },
+  { text = "invalidrecord"; nick = "yes"; word = "yes"; line = "yes"; },
+  { text = "invarec"; nick = "yes"; word = "yes"; line = "yes";},
   { text = "bddcast"; nick = "yes"; word = "yes"; }
 );
 

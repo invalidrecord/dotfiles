@@ -1,6 +1,6 @@
 [user]
-	name = Jeff Schoolcraft
-	email = jeff@thequeue.net
+	name =  InvalidRecord
+	email =  ir@e-ninja.co.uk
 [alias]
 	co = checkout
 	st = status
@@ -11,6 +11,6 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore
-	editor = mate -w
+	editor = vim
 [apply]
 	whitespace = nowarn
