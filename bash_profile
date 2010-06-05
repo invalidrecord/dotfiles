@@ -7,4 +7,6 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-if [[ -s /Users/jschoolcraft/.rvm/scripts/rvm ]] ; then source /Users/jschoolcraft/.rvm/scripts/rvm ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+
+export PATH="/home/invalidrecord/narwhal/bin:$PATH"

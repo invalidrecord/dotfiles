@@ -15,12 +15,6 @@ servers = (
     chatnet = "freenode";
     port = "6667";
     autoconnect = "yes";
-  },
-  {
-    address = "irc.fansnap.com";
-    chatnet = "fansnap";
-    port = "6667";
-    autoconnect = "yes";
   }
 );
 
@@ -28,7 +22,7 @@ servers = (
 chatnets = {
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg nickserv identify password";
+    autosendcmd = "/msg nickserv identify Rb338Df118";
     max_kicks = "4";
     max_modes = "3";
     max_msgs = "5";
@@ -45,7 +39,7 @@ channels = (
   { name = "#cucumber"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#rspec"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#offrails"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#dev"; chatnet = "fansnap"; autojoin = "yes"; }
+  { name = "#vim"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 #THIS SECTION DEALS WITH ALIASES
@@ -238,34 +232,31 @@ settings = {
     nick = "invalidrecord";
     timestamp_format = "%H:%M:%S";
     settings_autosave = "no";
-    awaylog_file  = "~/.irclogs/away.log";
+    awaylog_file = "~/.irclogs/away.log";
     log_timestamp = "%d-%b-%Y %H:%M ";
     chanmode_expando_strip = "no";
     recode_autodetect_utf8 = "no";
   };
-  "irc/core" = {
-    skip_motd        = "yes";
-    alternate_nick  = "invarec";
-  };
-  "fe-text" = { scrollback_time = "48h"; };
+  "irc/core" = { skip_motd = "yes"; alternate_nick = "invarec"; };
+  "fe-text" = { scrollback_time = "48h"; actlist_sort = "refnum"; };
   "fe-text/core" = { mail_counter = "off"; };
   "fe-common/core" = {
-    autolog                   = "yes";
-    autolog_path              = "~/.irclogs/$tag/${0}/${0}-%Y-%m-%d";
-    autolog_level             = "MSGS ACTIONS";
-    autoclose_windows         = "yes";
-    reuse_unused_windows      = "yes";
-    print_active_channel      = "no";
-    use_msgs_window           = "yes";
-    windows_auto_renumber     = "no";
-    show_nickmode_empty       = "yes";
-    show_names_on_join        = "no";
-    autocreate_query_level    = "NONE";
-    activity_hide_level       = "JOINS PARTS QUITS NICKS MODES";
-    show_nickmode             = "yes";
-    hilight_nick_matches      = "yes";
-    window_history            = "yes";
-    term_charset              = "utf-8";
+    autolog = "yes";
+    autolog_path = "~/.irclogs/$tag/${0}/${0}-%Y-%m-%d";
+    autolog_level = "MSGS ACTIONS";
+    autoclose_windows = "yes";
+    reuse_unused_windows = "yes";
+    print_active_channel = "no";
+    use_msgs_window = "yes";
+    windows_auto_renumber = "no";
+    show_nickmode_empty = "yes";
+    show_names_on_join = "no";
+    autocreate_query_level = "NONE";
+    activity_hide_level = "JOINS PARTS QUITS NICKS MODES";
+    show_nickmode = "yes";
+    hilight_nick_matches = "yes";
+    window_history = "yes";
+    term_charset = "utf-8";
   };
 
   "perl/core/scripts" = {
@@ -278,16 +269,24 @@ settings = {
 #THIS SECTION DEALS WITH YOUR HILIGHTS
 hilights = (
   { text = "invalidrecord"; nick = "yes"; word = "yes"; line = "yes"; },
-  { text = "invarec"; nick = "yes"; word = "yes"; line = "yes";},
+  { text = "invarec"; nick = "yes"; word = "yes"; line = "yes"; },
   { text = "bddcast"; nick = "yes"; word = "yes"; }
 );
 
 logs = { };
 ignores = (
   {
-    level     = "JOINS PARTS QUITS NICKS MODES";
-    channels  = ("#railsbridge", "#offrails", "#rspec", "#cucumber", "#irssi", "#rvm", "#dev");
-    network   = "freenode";
+    level = "JOINS PARTS QUITS NICKS MODES";
+    channels = (
+      "#railsbridge",
+      "#offrails",
+      "#rspec",
+      "#cucumber",
+      "#irssi",
+      "#rvm",
+      "#dev"
+    );
+    network = "freenode";
   }
 );
 
@@ -372,3 +371,6 @@ mainwindows = {
   9 = { first_line = "1"; lines = "10"; };
   1 = { first_line = "11"; lines = "22"; };
 };
+keyboard = ( 
+  { key = "meta-s"; id = "command"; data = "_spellcheck "; }
+);

@@ -13,15 +13,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" MacVim
-if has("gui_macvim")
-  set transparency=5
-  set lines=60
-  set formatoptions-=tc
-  set guioptions-=T
-  set cursorline
-endif
-
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -204,7 +195,6 @@ if executable("ack")
 endif
 
 " Color scheme
-colorscheme ir_black
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -233,3 +223,4 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " let pathogen bring in our plugins
 call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
 
+colorscheme vividchalk

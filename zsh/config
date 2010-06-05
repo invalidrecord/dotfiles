@@ -107,4 +107,6 @@ git_status() {
 }
 
 # prompt
-export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%3~%{$reset_color%}] '
+export PS1='⚡ $USER ⚡ $(git_prompt_info)${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%3~%{$reset_color%} [ṏ] '
+
+
