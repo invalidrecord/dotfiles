@@ -109,3 +109,6 @@
 [submodule "vimbundles/syntastic"]
 	path = vimbundles/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "snipmate-snippets"]
+	path = snipmate-snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
